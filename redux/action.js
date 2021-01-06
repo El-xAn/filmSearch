@@ -6,9 +6,7 @@ export const filmSearch = (filmData) => (
     }
 )
 
-export const addFavourite = (movies) => 
-(
-
+export const addFavourite = (movies) => (
   {
       type: "ADD_FAVOURITE",
       payload: movies
@@ -24,14 +22,12 @@ export const cleanFavourite = () => (
   }
 )
 
-// export const removeFavourite = (movies) => (
-//   {
-//       type: "ADD_FAVOURITE",
-//       payload: {
-//           favList: movies
-//       }
-//   }
-// )
+export const removeFromFav = (movies) => (
+  {
+      type: "REMOVE_FAVOURITE",
+      payload: movies
+  }
+)
    
 export const mainScreen = (dispatch, text) =>{
   return async () => {
