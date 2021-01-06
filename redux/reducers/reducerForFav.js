@@ -12,10 +12,12 @@ export const reducerForFav = (state = defaultState, action) => {
         case 'ADD_FAVOURITE': 
             // if(!state.favList.includes(action.payload))
             //     {
-                    return{ ...state, favList: [...state.favList, action.payload] }
+                    console.log('THIS IS PAYLOAD' + action.payload)
+                    return{...state,  favList: [...state.favList, action.payload] }
                 // }
         
-
+        default:
+            return state
     }
-    return state
+    
 }

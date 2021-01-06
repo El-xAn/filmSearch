@@ -74,7 +74,6 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => {
   return {
     data: state.reducerForSearch.data,
-    favList: state.reducerForFav.favList
   };
 };
 

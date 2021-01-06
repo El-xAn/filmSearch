@@ -1,9 +1,8 @@
 export const filmSearch = (filmData) => (
     {
         type: "SEARCH",
-        payload: {
-            data: filmData
-        }
+        payload:  filmData
+      
     }
 )
 
@@ -37,9 +36,8 @@ export const cleanFavourite = () => (
 export const mainScreen = (dispatch, text) =>{
   return async () => {
     try {
-      const url = 'http://api.tvmaze.com/search/shows?q=';
-      console.log(url+text)
-      const response = await fetch(url +text);
+      const url = `http://api.tvmaze.com/search/shows?q=${text}`;
+      const response = await fetch(url);
       const data = await response.json();
       dispatch(filmSearch(data));
     } catch (e) {
