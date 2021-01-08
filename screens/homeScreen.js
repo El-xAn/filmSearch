@@ -21,9 +21,9 @@ class HomeScreen extends Component {
 
   searchText = 'Who';
 
-  // componentDidMount = () => {
-  //   this.props.searching(this.searchText);
-  // };
+  componentDidMount = () => {
+    this.props.searching(this.searchText);
+  };
 
   render() {
     return (

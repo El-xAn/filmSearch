@@ -11,10 +11,10 @@ export function* mainScreenWorker(action) {
 }
 
 function fetchData(dispatched) {
-    
+    console.log(dispatched)
     return async () => {
         try {
-          const url = `http://api.tvmaze.com/search/shows?q=${dispatched}`;
+          const url = `http://api.tvmaze.com/search/shows?q=${dispatched.payload}`;
           const response = await fetch(url);
           return await response.json();
          
