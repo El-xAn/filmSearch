@@ -9,7 +9,7 @@ import {
   Button,
 } from 'react-native';
 import {styles} from '../styles/Styles';
-import {mainScreen, addFavourite} from '../redux/action';
+import {filmSearch, addFavourite} from '../redux/action';
 import {connect} from 'react-redux';
 
 
@@ -21,9 +21,9 @@ class HomeScreen extends Component {
 
   searchText = 'Who';
 
-  componentDidMount = () => {
-   this.props.searching(this.searchText);
-  };
+  // componentDidMount = () => {
+  //   this.props.searching(this.searchText);
+  // };
 
   render() {
     return (
@@ -66,7 +66,7 @@ class HomeScreen extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    searching: (text) => dispatch(mainScreen(dispatch, text)),
+    searching: (text) => dispatch(filmSearch(text)),
     add: (movies) => dispatch(addFavourite(movies))
   };
 };
